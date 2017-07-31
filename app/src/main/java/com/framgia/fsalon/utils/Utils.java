@@ -6,6 +6,9 @@ import android.support.design.widget.BottomNavigationView;
 import android.util.Log;
 
 import java.lang.reflect.Field;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import framgia.retrofitservicecreator.api.model.Respone;
 import io.reactivex.Observable;
@@ -44,5 +47,10 @@ public class Utils {
         } catch (IllegalAccessException e) {
             Log.e("BNVHelper", "Unable to change value of shift mode", e);
         }
+    }
+
+    public static String dateToString(Date date){
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        return df.format(date);
     }
 }

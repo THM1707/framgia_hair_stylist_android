@@ -34,4 +34,12 @@ public interface FSalonApi {
 
     @POST("api/v0/user_booking")
     Observable<Respone<BookingOder>> book(@QueryMap Map<String, String> parrams);
+
+    @POST("api/v0/register")
+    Observable<Respone<UserRespone>> registry(@Query("email") String email,
+                                           @Query("password") String passWord,
+                                              @Query("password_confirmation") String rePassword,
+                                              @Query("name") String name,
+                                              @Query("phone") String phone);
+
 }

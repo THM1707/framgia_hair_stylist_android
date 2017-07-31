@@ -29,4 +29,9 @@ public class UserRepository {
     public Observable<Boolean> saveCurrentUser(UserRespone userRespone) {
         return mUserLocalDataSource.saveCurrentUser(userRespone);
     }
+
+    public Observable<UserRespone> registry(String email, String password, String rePassword,
+                                            String name, String phone) {
+        return mUserRemoteDataSource.registry(email, password, rePassword, name, phone);
+    }
 }

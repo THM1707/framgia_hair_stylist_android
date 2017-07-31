@@ -19,5 +19,8 @@ public interface UserDataSource {
     interface RemoteDataSource {
 
         Observable<UserRespone> login(String account, String passWord);
+
+        Observable<UserRespone> registry(String email, String password, String rePassword, String
+            name, String phone);
     }
 }

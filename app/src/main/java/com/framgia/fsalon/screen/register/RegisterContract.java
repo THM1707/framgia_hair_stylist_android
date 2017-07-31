@@ -11,11 +11,17 @@ interface RegisterContract {
      * View.
      */
     interface ViewModel extends BaseViewModel<Presenter> {
+        void onRegistryClick();
+        void onRegistrySuccess();
+        void onRegistryFail(String msg);
+        void onLoginClick();
     }
 
     /**
      * Presenter.
      */
     interface Presenter extends BasePresenter {
+        void registryAccount(String email, String password, String rePassword, String name,
+                             String phone);
     }
 }

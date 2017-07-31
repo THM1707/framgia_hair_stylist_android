@@ -32,4 +32,18 @@ public class UserRemoteDataSource extends BaseRemoteDataSource
                 }
             });
     }
+
+    @Override
+    public Observable<UserRespone> registry(String email, String password, String rePassword,
+                                            String name, String phone) {
+        return mFSalonApi.registry(email, password, rePassword, name, phone).flatMap(
+            new Function<Respone<UserRespone>, ObservableSource<UserRespone>>() {
+                @Override
+                public ObservableSource<UserRespone> apply
+                    (@NonNull Respone<UserRespone> userResponeRespone)
+                    throws Exception {
+                    return Utils.getResponse(userResponeRespone);
+                }
+            });
+    }
 }

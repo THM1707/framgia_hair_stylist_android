@@ -51,4 +51,11 @@
     <string name="action_ok">OK</string>
     <string name="title_yesterday">Yesterday</string>
     <string name="title_calendar">Calendar</string>
+    <string name="title_call">Call</string>
+    <string name="title_message">Message</string>
+    <string name="title_next_service">Next service:</string>
+    <string name="title_service_time">Service time:</string>
+    <string name="tile_service">Service:</string>
+    <string name="title_booking_method">Booking method:</string>
+    <string name="title_note">Note</string>
 </resources>
